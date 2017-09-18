@@ -1,4 +1,4 @@
-<a id="post-list" class="mat-elevation-z2" *ngFor="let post of postList" fxLayout fxLayoutAlign="start stretch" routerLink="/landing-page">
+<div id="post-list" class="mat-elevation-z2 post-wrapper" *ngFor="let post of postList" fxLayout fxLayoutAlign="start stretch" routerLink="/post/{{post.url}}">
   <img src="{{post.imageUrl}}">
 
   <div class="content">
@@ -6,7 +6,7 @@
     <p class="info">Por <strong>{{post.author}}</strong> em <time datetime="2017-9-18">{{post.date}}</time></p>
     <p class="excerpt">{{post.description}}</p>
   </div>
-</a>
+</div>
 
 <md-paginator [length]="postList.length"
               [pageSize]="pageSize"
