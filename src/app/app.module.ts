@@ -18,6 +18,7 @@ import { PostLayoutComponent } from './components/layouts/post-layout/post-layou
 import { CallToActionComponent } from './components/reusable/call-to-action/call-to-action.component';
 import { IpService } from './services/ip.service';
 import { Http, HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { Http, HttpModule } from '@angular/http';
     CallToActionComponent,
   ],
   imports: [
+    FormsModule,
     HttpModule,
     BrowserModule,
     BrowserAnimationsModule,

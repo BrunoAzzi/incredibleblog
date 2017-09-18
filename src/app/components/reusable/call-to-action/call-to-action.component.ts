@@ -20,14 +20,9 @@ export class CallToActionComponent implements OnInit {
   ngOnInit() {
   }
 
-  saveLead(name, email) {
+  onSubmit() {
     this.ipService.getIp().subscribe(response => this.ip = response.query);
-    let lead = new Lead();
-    lead.email = email;
-    // lead.name = name;
-    // lead.ip = ip;
-
-    this.leadService.saveLead(lead);
+    // this.leadService.saveLead(lead);
   }
 
 }

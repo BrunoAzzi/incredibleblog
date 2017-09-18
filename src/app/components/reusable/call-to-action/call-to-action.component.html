@@ -1,24 +1,22 @@
 <md-card>
-  <form #myForm >
-    <md-card-content>
-      <img>
-      <p>
-        que legal assine agora
-      </p>
+  <md-card-content>
+    <img>
+    <p>
+      que legal assine agora
+    </p>
+      <form>
         <md-form-field>
-          <input #name mdInput placeholder="Name" required>
+          <input name="name" mdInput placeholder="Name" required>
         </md-form-field>
 
         <md-form-field>
-          <input #lastName mdInput placeholder="Last name" required>
+          <input name="lastname" mdInput placeholder="Last name" required>
         </md-form-field>
 
         <md-form-field>
-          <input #email mdInput placeholder="E-mail" required>
+          <input name="email" mdInput placeholder="E-mail" required>
         </md-form-field>
-      </md-card-content>
-    <md-card-actions>
-      <button md-raised-button color="accent" (click)="saveLead(email.value, name.value)" [disabled]="myForm">Assinar</button>
-    </md-card-actions>
-  </form>
+        <button md-raised-button color="accent">Assinar</button>
+      </form>
+    </md-card-content>
 </md-card>
