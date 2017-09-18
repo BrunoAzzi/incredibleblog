@@ -1,3 +1,5 @@
+@import "../../../../scss/color";
+
 :host {
   margin: 30px 15px;
 }
@@ -13,7 +15,7 @@
 
 .mat-card-header {
   padding: 10px 20px;
-  background-color: #59758a;
+  background-color: $purple;
 }
 
 .mat-select {
