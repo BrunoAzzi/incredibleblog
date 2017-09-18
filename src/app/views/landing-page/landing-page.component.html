@@ -1,0 +1,33 @@
+<div fxLayout="column">
+  <header fxLayout="row" fxLayoutAlign="center center">
+    <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex="75" fxFlex.xs="100" class="container" fxLayoutWrap>
+      <img src="http://api.adorable.io/avatar/40/asd">
+
+      <div class="banner" fxHide.md >
+        <img src="http://via.placeholder.com/350x150">
+      </div>
+
+    </div>
+  </header>
+  <md-toolbar fxFlex="row" fxLayout="center center" color="primary">
+    <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex="75" fxFlex.xs="100">
+    Blog
+    </div>
+  </md-toolbar>
+
+  <div class="content">
+
+    <md-list fxLayout="column">
+      <span>teste</span>
+      <md-list-item *ngFor="let lead of leadList ">
+        <span>{{ lead.email }}</span>
+      </md-list-item>
+    </md-list>
+
+    <section>
+      <button md-raised-button color="primary" (click)="openLeadForm()" >Tenho interesse!</button>
+    </section>
+  </div>
+
+  <footer></footer>
+</div>
