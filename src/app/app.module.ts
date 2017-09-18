@@ -19,6 +19,7 @@ import { CallToActionComponent } from './components/reusable/call-to-action/call
 import { IpService } from './services/ip.service';
 import { Http, HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
+import { TopnavbarComponent } from './components/layouts/topnavbar/topnavbar.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { FormsModule } from '@angular/forms';
     BlogComponent,
     PostLayoutComponent,
     CallToActionComponent,
+    TopnavbarComponent,
   ],
   imports: [
     FormsModule,
