@@ -17,7 +17,7 @@ import { BlogComponent } from './views/blog/blog.component';
 import { PostLayoutComponent } from './components/layouts/post-layout/post-layout.component';
 import { CallToActionComponent } from './components/reusable/call-to-action/call-to-action.component';
 import { IpService } from './services/ip.service';
-import { Http, HttpModule } from '@angular/http';
+import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { TopnavbarComponent } from './components/layouts/topnavbar/topnavbar.component';
 

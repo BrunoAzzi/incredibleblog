@@ -4,9 +4,15 @@
 
 #post-list {
   margin: 30px 0;
+
+  img {
+    width: auto;
+    height: auto;
+  }
 }
 
 .content {
+  min-width: 300px;
   padding: 10px 20px;
 }
 
