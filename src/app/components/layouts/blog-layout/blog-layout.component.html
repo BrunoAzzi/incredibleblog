@@ -1,0 +1,38 @@
+<md-toolbar color="primary">
+  <div fxLayout fxFlexFill fxLayoutAlign="space-between center">
+    <span> Web Marketing Digital</span>
+
+    <button md-raised-button color="accent">Assine</button>
+
+  </div>
+</md-toolbar>
+
+<div fxLayout fxLayoutAlign="center start">
+  <div fxLayout="column" fxFlex="50">
+    <router-outlet></router-outlet>
+  </div>
+  <div fxLayout="column" fxFlex="25">
+    <app-call-to-action></app-call-to-action>
+  </div>
+</div>
+
+<footer fxLayout="column">
+  <div class="call-to-action" fxLayout fxLayoutAlign="center center">
+    <div fxLayout fxFlex="75" fxLayoutAlign="space-around center">
+      <md-form-field>
+        <input #name mdInput placeholder="Name">
+      </md-form-field>
+      <md-form-field>
+        <input #email mdInput placeholder="E-mail">
+      </md-form-field>
+
+      <button md-raised-button color="accent" (click)="saveLead(email.value, name.value)">Assinar</button>
+    </div>
+  </div>
+  <div class="site-map">
+
+  </div>
+  <div class="copyright">
+
+  </div>
+</footer>

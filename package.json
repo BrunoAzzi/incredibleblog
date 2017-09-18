@@ -4,14 +4,14 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ng serve --no-progress",
+    "build": "ng build --no-progress",
     "production-build": "ng build --aot --prod --no-progress",
     "predeploy": "npm run production-build",
     "deploy": "firebase deploy",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "test": "ng test --no-progress",
+    "lint": "ng lint --no-progress",
+    "e2e": "ng e2e --no-progress"
   },
   "private": true,
   "dependencies": {

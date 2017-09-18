@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
-  MdButtonModule, MdDialogModule, MdInputModule, MdSnackBarModule, MdToolbarModule,
+  MdButtonModule, MdCardModule, MdDialogModule, MdInputModule, MdPaginatorModule, MdSnackBarModule, MdToolbarModule,
   MdTooltipModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -16,8 +16,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MdDialogModule,
     MdInputModule,
     MdSnackBarModule,
+    MdPaginatorModule,
+    MdCardModule,
   ],
   exports: [
+    MdCardModule,
     MdDialogModule,
     FlexLayoutModule,
     MdTooltipModule,
@@ -25,6 +28,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MdButtonModule,
     MdInputModule,
     MdSnackBarModule,
+    MdPaginatorModule,
   ],
   declarations: []
 })

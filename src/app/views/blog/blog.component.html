@@ -1,0 +1,14 @@
+<a id="post-list" class="mat-elevation-z2" *ngFor="let post of postList" fxLayout fxLayoutAlign="start stretch" routerLink="/landing-page">
+  <img src="{{post.imageUrl}}">
+
+  <div class="content">
+    <h4>{{post.title}}</h4>
+    <p class="info">Por <strong>{{post.author}}</strong> em <time datetime="2017-9-18">{{post.date}}</time></p>
+    <p class="excerpt">{{post.description}}</p>
+  </div>
+</a>
+
+<md-paginator [length]="postList.length"
+              [pageSize]="pageSize"
+              [pageSizeOptions]="[5, 10, 25, 100]">
+</md-paginator>
