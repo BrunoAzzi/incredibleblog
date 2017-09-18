@@ -1,6 +1,14 @@
+@import "../../../../scss/color";
+
 header {
-  background-image: url('/assets/background.png');
-  padding: 50px;
+  background-color: $purple;
   color: white;
+
+  img {
+    max-width: 500px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+  }
 }
 

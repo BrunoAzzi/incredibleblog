@@ -1,7 +1,15 @@
+@import '../../../../scss/color';
+
 header {
-  background-image: url('/assets/background.png');
-  padding: 50px;
+  background-color: $purple;
   color: white;
+
+  img {
+    max-width: 500px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+  }
 }
 
 .call-to-action {
@@ -16,5 +24,5 @@ header {
 .copyright {
   color: white;
   height: 50px;
-  background-color: #59758a;
+  background-color: $purple;
 }
