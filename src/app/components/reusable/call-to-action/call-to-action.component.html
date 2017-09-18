@@ -6,29 +6,27 @@
     <md-card-subtitle>Aplique-se preenchendo o formulário e descubra oportunidades não exploradas pela sua empresa</md-card-subtitle>
   </md-card-header>
   <md-card-content fxLayout="column">
-      <form fxLayout="column">
+      <form fxLayout="column" #leadForm="ngForm">
         <md-form-field>
-          <input name="name" mdInput placeholder="Name" required>
+          <input name="name" mdInput placeholder="Nome:" required [(ngModel)]="lead.name">
         </md-form-field>
 
         <md-form-field fxFlex>
-          <input name="lastname" mdInput placeholder="Last name" required>
+          <input name="lastname" mdInput placeholder="Sobrenome:" required [(ngModel)]="lead.lastname">
         </md-form-field>
+
 
         <md-form-field>
-          <input name="email" mdInput type="email" placeholder="E-mail" required>
+          <input name="email" mdInput type="email" placeholder="E-mail:" required [(ngModel)]="lead.email">
         </md-form-field>
 
-        <button md-raised-button color="accent">Assinar</button>
+        <md-select name="type" placeholder="Minha empresa atende:" [value]="'B2B'" [(ngModel)]="lead.type">
+          <md-option *ngFor="let companyType of companyTypeList" [value]="companyType.value">
+            {{ companyType.label }}
+          </md-option>
+        </md-select>
+
+        <button md-raised-button color="accent" (click)="saveLead()" [disabled]="!leadForm.form.valid">Assinar</button>
       </form>
-
-      <hr>
-
-      <span fxFlexAlign="center" class="or-span">ou</span>
-
-      <button md-raised-button class="google-button">
-        <img src="/assets/google_icon.png" >
-        Assinar com Google Mail
-      </button>
     </md-card-content>
 </md-card>

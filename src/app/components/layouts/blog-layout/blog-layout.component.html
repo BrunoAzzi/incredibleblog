@@ -1,11 +1,8 @@
-<md-toolbar color="primary">
-  <div fxLayout fxFlexFill fxLayoutAlign="space-between center">
-    <span> Web Marketing Digital</span>
-
-    <button md-raised-button color="accent">Assine</button>
-
+<header>
+  <div class="header hgroup" fxLayout="column" fxLayoutAlign="center center">
+    <h1 style="font-size: 28px; line-height: 40px;">Web Marketing - Conselhos Digitais</h1>
   </div>
-</md-toolbar>
+</header>
 
 <div fxLayout fxLayoutAlign="center start">
   <div fxLayout="column" fxFlex="50">
@@ -18,21 +15,33 @@
 
 <footer fxLayout="column">
   <div class="call-to-action" fxLayout fxLayoutAlign="center center">
-    <div fxLayout fxFlex="75" fxLayoutAlign="space-around center">
-      <md-form-field>
-        <input #name mdInput placeholder="Name">
-      </md-form-field>
-      <md-form-field>
-        <input #email mdInput placeholder="E-mail">
-      </md-form-field>
+      <form fxLayout fxFlex="95" fxLayoutAlign="space-around center" #leadForm="ngForm">
+        <md-form-field>
+          <input name="name" mdInput placeholder="Nome:" required [(ngModel)]="lead.name">
+        </md-form-field>
 
-      <button md-raised-button color="accent">Assinar</button>
-    </div>
+        <md-form-field>
+          <input name="lastname" mdInput placeholder="Sobrenome:" required [(ngModel)]="lead.lastname">
+        </md-form-field>
+
+
+        <md-form-field>
+          <input name="email" mdInput type="email" placeholder="E-mail:" required [(ngModel)]="lead.email">
+        </md-form-field>
+
+        <md-select name="type" placeholder="Minha empresa atende:" [value]="'B2B'" [(ngModel)]="lead.type">
+          <md-option *ngFor="let companyType of companyTypeList" [value]="companyType.value">
+            {{ companyType.label }}
+          </md-option>
+        </md-select>
+
+        <button md-raised-button color="accent" (click)="saveLead()" [disabled]="!leadForm.form.valid">Assinar</button>
+      </form>
   </div>
-  <div class="site-map">
+  <!--<div class="site-map">-->
 
-  </div>
-  <div class="copyright">
-
+  <!--</div>-->
+  <div class="copyright" fxLayout fxLayoutAlign="center center">
+    Copyright © Web Marketing - Conselhos Digitais 2017
   </div>
 </footer>

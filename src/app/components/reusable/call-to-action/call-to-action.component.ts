@@ -11,6 +11,19 @@ import { Lead } from '../../../model/lead';
 export class CallToActionComponent implements OnInit {
 
   ip: string = '';
+  companyTypeList = [
+    { label: "Comércio em geral", value: "B2C" },
+    { label: "Outras empresas", value: "B2B" },
+    { label: "Não represento uma empresa", value: "" }
+  ];
+
+  lead = {
+    name: "",
+    lastname: "",
+    email: "",
+    type: "",
+    ip: ""
+  };
 
   constructor(
     private ipService: IpService,
@@ -20,9 +33,11 @@ export class CallToActionComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit() {
-    this.ipService.getIp().subscribe(response => this.ip = response.query);
-    // this.leadService.saveLead(lead);
+  saveLead() {
+    this.ipService.getIp().subscribe(response => {
+      this.lead.ip = response.query;
+      this.leadService.saveLead(this.lead);
+    });
   }
 
 }

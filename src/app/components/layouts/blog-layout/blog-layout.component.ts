@@ -7,9 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogLayoutComponent implements OnInit {
 
+  lead = {
+    name: "",
+    lastname: "",
+    email: "",
+    type: ""
+  };
+
+  companyTypeList = [
+    { label: "Comércio em geral", value: "B2C" },
+    { label: "Outras empresas", value: "B2B" },
+    { label: "Não represento uma empresa", value: "" }
+  ]
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  saveLead() {
+    console.log(this.lead);
   }
 
 }
