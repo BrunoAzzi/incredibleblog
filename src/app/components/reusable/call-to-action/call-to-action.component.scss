@@ -1,3 +1,51 @@
 :host {
   margin: 30px 15px;
 }
+
+.mat-card {
+  padding: 0;
+  background-color: #f2f4f5;
+}
+
+.mat-card-content {
+  padding: 20px;
+}
+
+.mat-card-header {
+  padding: 10px 20px;
+  background-color: #59758a;
+}
+
+.mat-input-container {
+  width: 100%;
+}
+
+.mat-card-title {
+  color: white;
+}
+
+.mat-card-subtitle {
+  color: white;
+}
+
+button {
+  margin: 5px 0;
+}
+
+hr {
+  margin: 20px 0;
+}
+
+button img {
+  margin: 0 10px;
+  width: 25px;
+  height: 25px;
+}
+
+.google-button {
+  color: gray;
+}
+
+.or-span {
+  margin-bottom: 20px;
+}
