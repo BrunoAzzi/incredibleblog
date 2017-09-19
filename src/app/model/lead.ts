@@ -3,6 +3,7 @@ export interface ILead {
   lastname: string;
   email: string;
   type: string;
+  ip: string;
 }
 
 export class Lead implements ILead {
@@ -10,6 +11,7 @@ export class Lead implements ILead {
   lastname: string;
   email: string;
   type: string;
+  ip: string;
 
   constructor()
   constructor(data?: any) {
@@ -17,6 +19,7 @@ export class Lead implements ILead {
     this.lastname = data && data.lastname || "";
     this.email = data && data.email || "";
     this.type = data && data.type || "";
+    this.ip = data && data.ip || "";
   }
 
 }
