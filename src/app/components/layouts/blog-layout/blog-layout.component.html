@@ -1,3 +1,5 @@
+<div fxLayout="column" fxLayoutAlign="space-between" class="container">
+
 <app-topnavbar></app-topnavbar>
 
 <div fxLayout fxLayoutAlign="center start" fxLayoutWrap>
@@ -10,6 +12,7 @@
 </div>
 
 <footer fxLayout="column">
+  <fb-like href="https://www.facebook.com/zuck"></fb-like>
   <div class="call-to-action" fxLayout fxLayoutAlign="center center">
       <form fxLayout fxFlex="95" fxLayoutAlign="space-around center" #leadForm="ngForm">
         <md-form-field>
@@ -31,10 +34,11 @@
           </md-option>
         </md-select>
 
-        <button md-raised-button color="accent" (click)="saveLead()" [disabled]="!leadForm.form.valid">Assinar</button>
+        <button md-raised-button color="accent" (click)="saveLead()" >Assinar</button>
       </form>
   </div>
   <div class="copyright" fxLayout fxLayoutAlign="center center">
     Copyright © Web Marketing - Conselhos Digitais 2017
   </div>
 </footer>
+</div>

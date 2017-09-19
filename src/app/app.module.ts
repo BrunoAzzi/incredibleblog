@@ -20,6 +20,7 @@ import { IpService } from './services/ip.service';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { TopnavbarComponent } from './components/layouts/topnavbar/topnavbar.component';
+import { FacebookModule } from 'ngx-facebook';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { TopnavbarComponent } from './components/layouts/topnavbar/topnavbar.com
     BrowserAnimationsModule,
     MaterialModule,
     AppRoutingModule,
+    FacebookModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule
   ],
