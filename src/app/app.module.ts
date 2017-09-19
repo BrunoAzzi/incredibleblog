@@ -20,6 +20,7 @@ import { IpService } from './services/ip.service';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { TopnavbarComponent } from './components/layouts/topnavbar/topnavbar.component';
+import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
 import { FacebookModule } from 'ngx-facebook';
 import { MarkdownToHtmlModule } from 'ng2-markdown-to-html';
 import { PostService } from './services/post.service';
@@ -52,7 +53,8 @@ import { CKEditorModule } from 'ng2-ckeditor';
     FacebookModule.forRoot(),
     MarkdownToHtmlModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    Angulartics2Module.forRoot([ Angulartics2GoogleAnalytics ])
   ],
   providers: [
     LeadService,
