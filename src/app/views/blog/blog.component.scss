@@ -11,6 +11,13 @@
     width: auto;
     height: auto;
   }
+
+  .cover {
+    min-width: 200px;
+    min-height: 150px;
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 .content {

@@ -1,7 +1,8 @@
 <div id="post-list" class="mat-elevation-z2 post-wrapper" *ngFor="let post of postList | async"
-     fxLayout fxLayoutAlign="start center" fxLayoutWrap fxLayout.xs="column"
+     fxLayout fxLayoutAlign="start stretch" fxLayoutWrap fxLayout.xs="column"
      routerLink="/post/{{post.path}}">
-    <img src="{{post.imageUrl}}">
+  <div class="cover" [ngStyle]="{'background-image': 'url(' + post.imageUrl + ')'}"></div>
+    <!--<img src="{{post.imageUrl}}">-->
 
   <div class="content" fxFlex>
     <h4>{{post.title}}</h4>
