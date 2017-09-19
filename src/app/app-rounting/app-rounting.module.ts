@@ -23,7 +23,11 @@ const routes: Routes = [
           path: 'blog', component: BlogComponent
       },
       {
-        path: 'post/{postname}', component: PostLayoutComponent
+        path: 'post', children: [
+          {
+            path: '10-dicas-de-redes-sociais-para-sua-empresa', component: PostLayoutComponent
+          }
+        ]
       }
     ]
   }
