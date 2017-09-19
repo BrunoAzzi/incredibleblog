@@ -2,8 +2,8 @@ test:
   override:
     - echo 'test'
 
-deployment:
-  master:
-    branch: master
-    commands:
-      - firebase deploy --token "$FIREBASE_TOKEN" --non-interactive
+#deployment:
+#  master:
+#    branch: master
+#    commands:
+#      - ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" --non-interactive
