@@ -21,6 +21,12 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { TopnavbarComponent } from './components/layouts/topnavbar/topnavbar.component';
 import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
+import { FacebookModule } from 'ngx-facebook';
+import { MarkdownToHtmlModule } from 'ng2-markdown-to-html';
+import { PostService } from './services/post.service';
+import { PostFormComponent } from './views/post-form/post-form.component';
+import { PostListComponent } from './views/post-list/post-list.component';
+import { CKEditorModule } from 'ng2-ckeditor';
 
 @NgModule({
   declarations: [
@@ -33,20 +39,26 @@ import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
     PostLayoutComponent,
     CallToActionComponent,
     TopnavbarComponent,
+    PostFormComponent,
+    PostListComponent,
   ],
   imports: [
     FormsModule,
+    CKEditorModule,
     HttpModule,
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
     AppRoutingModule,
+    FacebookModule.forRoot(),
+    MarkdownToHtmlModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     Angulartics2Module.forRoot([ Angulartics2GoogleAnalytics ])
   ],
   providers: [
     LeadService,
+    PostService,
     IpService
   ],
   bootstrap: [AppComponent],

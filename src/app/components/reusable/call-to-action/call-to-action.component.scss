@@ -1,5 +1,9 @@
 @import "../../../../scss/color";
 
+* {
+  font-size: 18px;
+}
+
 :host {
   margin: 30px 15px;
 }
@@ -36,22 +40,4 @@
 
 button {
   margin: 5px 0;
-}
-
-hr {
-  margin: 20px 0;
-}
-
-button img {
-  margin: 0 10px;
-  width: 25px;
-  height: 25px;
-}
-
-.google-button {
-  color: gray;
-}
-
-.or-span {
-  margin-bottom: 20px;
 }

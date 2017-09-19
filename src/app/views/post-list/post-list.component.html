@@ -1,11 +1,25 @@
+<button md-raised-button="primary" [routerLink]="['/blog/make/post/']" >
+  <md-icon>add</md-icon>
+  <span>New Post</span>
+</button>
+
 <div id="post-list" class="mat-elevation-z2 post-wrapper" *ngFor="let post of postList | async"
      fxLayout fxLayoutAlign="start center" fxLayoutWrap fxLayout.xs="column"
      routerLink="/post/{{post.path}}">
-    <img src="{{post.imageUrl}}">
+  <img src="{{post.imageUrl}}">
 
   <div class="content" fxFlex>
     <h4>{{post.title}}</h4>
     <p class="info">Por <strong>{{post.author}}</strong> em <time datetime="2017-9-18">{{ post.date | date:'yMd' }}</time></p>
     <p class="excerpt">{{post.description}}</p>
+  </div>
+
+  <div class="tools">
+    <button md-icon-button md-tooltip="Edit Post" [routerLink]="['/blog/make/post/' + post.path ]">
+      <md-icon>edit</md-icon>
+    </button>
+    <!--<button md-icon-button md-tooltip="Remove post">-->
+      <!--<md-icon>delete</md-icon>-->
+    <!--</button>-->
   </div>
 </div>

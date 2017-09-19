@@ -1,0 +1,38 @@
+<h1>Cadastre seu Post</h1>
+
+<ckeditor
+  [(ngModel)]="post.content"
+  [config]=""
+  [readonly]="false"
+  debounce="500">
+  <!--(change)="onChange($event)"-->
+  <!--(ready)="onReady($event)"-->
+  <!--(focus)="onFocus($event)"-->
+  <!--(blur)="onBlur($event)"-->
+</ckeditor>
+
+<hr>
+
+<form fxLayout="column" fxLayoutAlign="center center" #postForm="ngForm">
+  <md-form-field>
+    <input name="title" mdInput placeholder="Titulo:" required [(ngModel)]="post.title">
+  </md-form-field>
+
+  <md-form-field>
+    <input name="description" mdInput placeholder="Descrição:" required [(ngModel)]="post.description">
+  </md-form-field>
+
+  <md-form-field>
+    <input name="author" mdInput placeholder="Autor:" required [(ngModel)]="post.author">
+  </md-form-field>
+
+  <md-form-field>
+    <input name="imageUrl" mdInput placeholder="Url da imagem:" required [(ngModel)]="post.imageUrl">
+  </md-form-field>
+
+  <!--<md-form-field>-->
+    <!--<input name="markdownUrl" mdInput placeholder="Url do arquivo markdown (o post em si):" required [(ngModel)]="post.markdownUrl">-->
+  <!--</md-form-field>-->
+
+  <button md-raised-button color="accent" (click)="savePost();postForm.form.reset()" [disabled]="!postForm.form.valid">Assinar</button>
+</form>

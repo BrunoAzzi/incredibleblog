@@ -5,6 +5,8 @@ import { LandingPageLayoutComponent } from '../components/layouts/landing-page-l
 import { BlogLayoutComponent } from '../components/layouts/blog-layout/blog-layout.component';
 import { BlogComponent } from '../views/blog/blog.component';
 import { PostLayoutComponent } from '../components/layouts/post-layout/post-layout.component';
+import { PostFormComponent } from '../views/post-form/post-form.component';
+import { PostListComponent } from '../views/post-list/post-list.component';
 
 const routes: Routes = [
   {
@@ -20,10 +22,16 @@ const routes: Routes = [
   {
     path: '', component: BlogLayoutComponent, children: [
       {
-          path: 'blog', component: BlogComponent
+        path: 'blog', component: BlogComponent
       },
       {
-        path: 'post/{postname}', component: PostLayoutComponent
+        path: 'blog/make/post-list', component: PostListComponent
+      },
+      {
+        path: 'blog/make/post', component: PostFormComponent
+      },
+      {
+        path: 'post/:post-title', component: PostLayoutComponent
       }
     ]
   }

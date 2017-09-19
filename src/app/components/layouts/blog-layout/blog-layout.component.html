@@ -1,3 +1,5 @@
+<div fxLayout="column" fxLayoutAlign="space-between" class="container">
+
 <app-topnavbar></app-topnavbar>
 
 <div fxLayout fxLayoutAlign="center start" fxLayoutWrap>
@@ -10,31 +12,9 @@
 </div>
 
 <footer fxLayout="column">
-  <div class="call-to-action" fxLayout fxLayoutAlign="center center">
-      <form fxLayout fxFlex="95" fxLayoutAlign="space-around center" #leadForm="ngForm">
-        <md-form-field>
-          <input name="name" mdInput placeholder="Nome:" required [(ngModel)]="lead.name">
-        </md-form-field>
-
-        <md-form-field>
-          <input name="lastname" mdInput placeholder="Sobrenome:" required [(ngModel)]="lead.lastname">
-        </md-form-field>
-
-
-        <md-form-field>
-          <input name="email" mdInput type="email" placeholder="E-mail:" required [(ngModel)]="lead.email">
-        </md-form-field>
-
-        <md-select name="type" placeholder="Minha empresa atende:" [value]="'B2B'" [(ngModel)]="lead.type">
-          <md-option *ngFor="let companyType of companyTypeList" [value]="companyType.value">
-            {{ companyType.label }}
-          </md-option>
-        </md-select>
-
-        <button md-raised-button color="accent" (click)="saveLead()" [disabled]="!leadForm.form.valid">Assinar</button>
-      </form>
-  </div>
+  <div class="call-to-action" fxLayout fxLayoutAlign="center center"></div>
   <div class="copyright" fxLayout fxLayoutAlign="center center">
     Copyright © Web Marketing - Conselhos Digitais 2017
   </div>
 </footer>
+</div>

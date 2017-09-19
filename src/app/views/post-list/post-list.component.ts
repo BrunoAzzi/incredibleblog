@@ -4,11 +4,11 @@ import { Post } from '../../model/post';
 import { PostService } from '../../services/post.service';
 
 @Component({
-  selector: 'app-blog',
-  templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.scss']
+  selector: 'app-post-list',
+  templateUrl: './post-list.component.html',
+  styleUrls: ['./post-list.component.scss']
 })
-export class BlogComponent implements OnInit {
+export class PostListComponent implements OnInit {
 
   postList: FirebaseListObservable<Post[]>;
 
@@ -18,6 +18,10 @@ export class BlogComponent implements OnInit {
 
   ngOnInit() {
     this.postList = this.postService.getPostList();
+  }
+
+  editPost(post) {
+
   }
 
 }

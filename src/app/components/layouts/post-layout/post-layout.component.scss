@@ -1,0 +1,12 @@
+:host {
+  overflow: hidden;
+  margin: 30px 30px 60px;
+  text-align: justify;
+
+  & /deep/ img{
+    width: auto;
+    height: auto;
+    max-width: 1000px;
+    margin-bottom: 30px;
+  }
+}
