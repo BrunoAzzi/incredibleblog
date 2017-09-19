@@ -1,6 +1,7 @@
 @import "../../../../scss/color";
 
 header {
+  margin-top: 64px;
   background-color: $purple;
   padding: 40px;
   color: white;
@@ -10,5 +11,18 @@ header {
     width: auto;
     height: auto;
   }
+}
+
+.icon img {
+  max-height: 40px;
+  width: auto;
+  height: auto;
+}
+
+.mat-toolbar {
+  z-index: 9999;
+  position: fixed;
+  left: 0;
+  top: 0;
 }
 
