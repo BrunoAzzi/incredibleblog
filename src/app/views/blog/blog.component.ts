@@ -9,36 +9,12 @@ export class BlogComponent implements OnInit {
 
   postList = [
     {
-      imageUrl: "http://via.placeholder.com/160x165",
-      url: "compra-midia",
-      title: "Planejamento de compra de mídia: 5 dicas para quem quer começar + planilha gratuita",
-      author: "Mônica Custódio",
-      date: "2017/12/12",
-      description: "Conheça os primeiros passos para iniciar o investimento em mídia paga e baixe uma planilha gratuita para monitorar seus resultados"
-    },
-    {
-      imageUrl: "http://via.placeholder.com/160x165",
-      title: "Planejamento de compra de mídia: 5 dicas para quem quer começar + planilha gratuita",
-      author: "Mônica Custódio",
-      url: "compra-midia",
-      date: "2017/12/12",
-      description: "Conheça os primeiros passos para iniciar o investimento em mídia paga e baixe uma planilha gratuita para monitorar seus resultados"
-    },
-    {
-      imageUrl: "http://via.placeholder.com/160x165",
-      title: "Planejamento de compra de mídia: 5 dicas para quem quer começar + planilha gratuita",
-      author: "Mônica Custódio",
-      url: "compra-midia",
-      date: "2017/12/12",
-      description: "Conheça os primeiros passos para iniciar o investimento em mídia paga e baixe uma planilha gratuita para monitorar seus resultados"
-    },
-    {
-      imageUrl: "http://via.placeholder.com/160x165",
-      title: "Planejamento de compra de mídia: 5 dicas para quem quer começar + planilha gratuita",
-      author: "Mônica Custódio",
-      url: "compra-midia",
-      date: "2017/12/12",
-      description: "Conheça os primeiros passos para iniciar o investimento em mídia paga e baixe uma planilha gratuita para monitorar seus resultados"
+      imageUrl: "/assets/post1.png",
+      url: "10-dicas-de-redes-sociais-para-sua-empresa",
+      title: "10 Dicas de Redes Sociais para a sua empresa.",
+      author: "Carolina Silva",
+      date: "18/09/2017",
+      description: "Se você deseja promover a sua empresa gastando pouco e utilizando recursos simples, as redes sociais podem ser uma solução pra você. Selecionamos dez dicas infalíveis de marketing em redes sociais."
     }
   ];
 

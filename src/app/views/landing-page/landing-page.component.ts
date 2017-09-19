@@ -12,27 +12,12 @@ import { Lead } from '../../model/lead';
 })
 export class LandingPageComponent implements OnInit {
 
-  leadList: Lead[];
-
   constructor(
     private dialog: MdDialog,
-    private leadService: LeadService,
     private snackbar: MdSnackBar
   ) { }
 
   ngOnInit() {
-    this.leadService.getLeadList().subscribe(leadList => {
-      console.log(leadList);
-      this.leadList = leadList;
-    });
-  }
-
-  openLeadForm() {
-    let dialogRef = this.dialog.open(LeadFormComponent);
-
-    dialogRef.afterClosed().subscribe(message => {
-      this.snackbar.open( message, 'Ok', { duration: 8000 } )
-    });
   }
 
 }
