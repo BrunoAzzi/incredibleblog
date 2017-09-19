@@ -1,16 +1,11 @@
-<div id="post-list" class="mat-elevation-z2 post-wrapper" *ngFor="let post of postList"
+<div id="post-list" class="mat-elevation-z2 post-wrapper" *ngFor="let post of postList | async"
      fxLayout fxLayoutAlign="start center" fxLayoutWrap fxLayout.xs="column"
-     routerLink="/post/{{post.url}}">
+     routerLink="/post/{{post.path}}">
     <img src="{{post.imageUrl}}">
 
   <div class="content" fxFlex>
     <h4>{{post.title}}</h4>
-    <p class="info">Por <strong>{{post.author}}</strong> em <time datetime="2017-9-18">{{post.date}}</time></p>
+    <p class="info">Por <strong>{{post.author}}</strong> em <time datetime="2017-9-18">{{ post.date | date:'yMd' }}</time></p>
     <p class="excerpt">{{post.description}}</p>
   </div>
 </div>
-
-<!--<md-paginator [length]="postList.length"-->
-              <!--[pageSize]="pageSize"-->
-              <!--[pageSizeOptions]="[5, 10, 25, 100]">-->
-<!--</md-paginator>-->

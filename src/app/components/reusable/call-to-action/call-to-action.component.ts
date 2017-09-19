@@ -11,6 +11,7 @@ import { Lead } from '../../../model/lead';
 export class CallToActionComponent implements OnInit {
 
   ip: string = '';
+
   companyTypeList = [
     { label: "Comércio em geral", value: "B2C" },
     { label: "Outras empresas", value: "B2B" },

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseListObservable } from 'angularfire2/database';
+import { Post } from '../../model/post';
+import { PostService } from '../../services/post.service';
 
 @Component({
   selector: 'app-blog',
@@ -7,22 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
-  postList = [
-    {
-      imageUrl: "/assets/post1.png",
-      url: "10-dicas-de-redes-sociais-para-sua-empresa",
-      title: "10 Dicas de Redes Sociais para a sua empresa.",
-      author: "Carolina Silva",
-      date: "18/09/2017",
-      description: "Se você deseja promover a sua empresa gastando pouco e utilizando recursos simples, as redes sociais podem ser uma solução pra você. Selecionamos dez dicas infalíveis de marketing em redes sociais."
-    }
-  ];
+  postList: FirebaseListObservable<Post[]>;
 
-  pageSize = 5;
-
-  constructor() { }
+  constructor(
+    private postService: PostService
+  ) { }
 
   ngOnInit() {
+    this.postList = this.postService.getPostList();
   }
 
 }
