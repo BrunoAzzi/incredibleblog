@@ -33,7 +33,7 @@ export class CallToActionComponent implements OnInit {
       this.snackbar.open("Corrija os erros no formulário para cadastrar", "Ok", { duration: 5000 });
     } else {
       this.ipService.getIp().subscribe(response => {
-        this.lead.ip = response.query;
+        this.lead.ip = response.ip;
         this.leadService.saveLead(this.lead).then(
           success => {
             this.snackbar.open("Parabéns, você foi incluido com sucesso na nossa lista.", "Ok", { duration: 5000 });
