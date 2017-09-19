@@ -6,4 +6,4 @@ deployment:
   master:
     branch: master
     commands:
-      - firebase deploy --token "$FIREBASE_TOKEN" --non-interactive
+      - ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" --non-interactive
