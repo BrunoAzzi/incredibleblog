@@ -21,6 +21,9 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { TopnavbarComponent } from './components/layouts/topnavbar/topnavbar.component';
 import { FacebookModule } from 'ngx-facebook';
+import { MarkdownToHtmlModule } from 'ng2-markdown-to-html';
+import { PostService } from './services/post.service';
+import { PostFormComponent } from './views/post-form/post-form.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,7 @@ import { FacebookModule } from 'ngx-facebook';
     PostLayoutComponent,
     CallToActionComponent,
     TopnavbarComponent,
+    PostFormComponent,
   ],
   imports: [
     FormsModule,
@@ -42,11 +46,13 @@ import { FacebookModule } from 'ngx-facebook';
     MaterialModule,
     AppRoutingModule,
     FacebookModule.forRoot(),
+    MarkdownToHtmlModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule
   ],
   providers: [
     LeadService,
+    PostService,
     IpService
   ],
   bootstrap: [AppComponent],

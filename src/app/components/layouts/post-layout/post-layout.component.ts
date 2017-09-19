@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Post } from "../../../model/post";
+import { PostService } from '../../../services/post.service';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-post-layout',
@@ -7,9 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostLayoutComponent implements OnInit {
 
-  constructor() { }
+  post: Observable<Post>;
+
+  constructor(
+    private route: ActivatedRoute,
+    private postService: PostService
+  ) { }
 
   ngOnInit() {
+    this.route.params.subscribe(params => {
+      this.post = this.postService.getPost(params['post-title']);
+    });
   }
-
 }
