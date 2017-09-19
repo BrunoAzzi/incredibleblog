@@ -24,6 +24,8 @@ import { FacebookModule } from 'ngx-facebook';
 import { MarkdownToHtmlModule } from 'ng2-markdown-to-html';
 import { PostService } from './services/post.service';
 import { PostFormComponent } from './views/post-form/post-form.component';
+import { PostListComponent } from './views/post-list/post-list.component';
+import { CKEditorModule } from 'ng2-ckeditor';
 
 @NgModule({
   declarations: [
@@ -37,9 +39,11 @@ import { PostFormComponent } from './views/post-form/post-form.component';
     CallToActionComponent,
     TopnavbarComponent,
     PostFormComponent,
+    PostListComponent,
   ],
   imports: [
     FormsModule,
+    CKEditorModule,
     HttpModule,
     BrowserModule,
     BrowserAnimationsModule,
