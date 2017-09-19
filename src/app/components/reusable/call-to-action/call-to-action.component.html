@@ -1,9 +1,11 @@
 <md-card>
   <md-card-header>
     <md-card-title>
-      <h4>Receba orientações de Marketing Digital gratuitamente</h4>
+      <h4>Receba de forma gratuita os nossos materiais informativos.</h4>
     </md-card-title>
-    <md-card-subtitle>Aplique-se preenchendo o formulário e descubra oportunidades não exploradas pela sua empresa</md-card-subtitle>
+    <md-card-subtitle>
+      Cadastre-se agora e receba por e-mail conteúdos que farão o seu negócio crescer.
+    </md-card-subtitle>
   </md-card-header>
   <md-card-content fxLayout="column">
       <form fxLayout="column" #leadForm="ngForm">
@@ -26,7 +28,7 @@
           </md-option>
         </md-select>
 
-        <button md-raised-button color="accent" (click)="saveLead()" [disabled]="!leadForm.form.valid">Assinar</button>
+        <button md-raised-button color="accent" (click)="saveLead()">Assinar</button>
       </form>
     </md-card-content>
 </md-card>
