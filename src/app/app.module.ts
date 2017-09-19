@@ -20,6 +20,7 @@ import { IpService } from './services/ip.service';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { TopnavbarComponent } from './components/layouts/topnavbar/topnavbar.component';
+import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { TopnavbarComponent } from './components/layouts/topnavbar/topnavbar.com
     MaterialModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    Angulartics2Module.forRoot([ Angulartics2GoogleAnalytics ])
   ],
   providers: [
     LeadService,
