@@ -1,14 +1,10 @@
-<header>
-  <div class="header hgroup" fxLayout="column" fxLayoutAlign="center center">
-    <img src="/assets/logo.jpg">
-  </div>
-</header>
+<app-topnavbar></app-topnavbar>
 
-<div fxLayout fxLayoutAlign="center start">
-  <div fxLayout="column" fxFlex="50">
+<div fxLayout fxLayoutAlign="center start" fxLayoutWrap>
+  <div fxLayout="column" fxFlex="50" fxFlex.lt-md="100">
     <router-outlet></router-outlet>
   </div>
-  <div fxLayout="column" fxFlex="25">
+  <div fxLayout="column" fxFlex="25" fxFlex.lt-md="80" fxFlex.xs="100" fxFlex.md="35">
     <app-call-to-action></app-call-to-action>
   </div>
 </div>
