@@ -17,7 +17,7 @@ import { BlogComponent } from './views/blog/blog.component';
 import { PostLayoutComponent } from './components/layouts/post-layout/post-layout.component';
 import { CallToActionComponent } from './components/reusable/call-to-action/call-to-action.component';
 import { IpService } from './services/ip.service';
-import { HttpModule } from '@angular/http';
+import { JsonpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { TopnavbarComponent } from './components/layouts/topnavbar/topnavbar.component';
 import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
@@ -45,7 +45,7 @@ import { CKEditorModule } from 'ng2-ckeditor';
   imports: [
     FormsModule,
     CKEditorModule,
-    HttpModule,
+    JsonpModule,
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,

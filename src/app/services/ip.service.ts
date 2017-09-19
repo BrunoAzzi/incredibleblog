@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
-import { Http   } from '@angular/http';
+import { Jsonp } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
 export class IpService {
 
   constructor(
-    private http: Http
+    private _jsonp: Jsonp
   ) { }
 
   getIp() {
-    return this.http.get("http://ip-api.com/json").map(res => res.json());
+    return this._jsonp.get('http://ip-api.com/json?callback=JSONP_CALLBACK').map(data => data.json());
   }
 
 }
