@@ -10,7 +10,7 @@ export class IpService {
   ) { }
 
   getIp() {
-    return this._jsonp.get('http://ip-api.com/json?callback=JSONP_CALLBACK').map(data => data.json());
+    return this._jsonp.get('https://api.ipify.org/?format=jsonp&callback=JSONP_CALLBACK').map(data => data.json());
   }
 
 }
