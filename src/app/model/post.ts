@@ -6,6 +6,7 @@ export interface IPost {
   imageUrl: string;
   path: string;
   markdownUrl: string;
+  content: string;
 }
 
 export class Post implements IPost {
@@ -16,6 +17,7 @@ export class Post implements IPost {
   imageUrl: string;
   path: string;
   markdownUrl: string;
+  content: string;
 
   constructor()
   constructor(data?: any) {

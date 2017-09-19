@@ -1,5 +1,18 @@
 <h1>Cadastre seu Post</h1>
 
+<ckeditor
+  [(ngModel)]="post.content"
+  [config]=""
+  [readonly]="false"
+  (change)="onChange($event)"
+  (ready)="onReady($event)"
+  (focus)="onFocus($event)"
+  (blur)="onBlur($event)"
+  debounce="500">
+</ckeditor>
+
+<hr>
+
 <form fxLayout="column" fxLayoutAlign="center center" #postForm="ngForm">
   <md-form-field>
     <input name="title" mdInput placeholder="Titulo:" required [(ngModel)]="post.title">
@@ -20,7 +33,6 @@
   <md-form-field>
     <input name="markdownUrl" mdInput placeholder="Url do arquivo markdown (o post em si):" required [(ngModel)]="post.markdownUrl">
   </md-form-field>
-
 
   <button md-raised-button color="accent" (click)="savePost();postForm.form.reset()" [disabled]="!postForm.form.valid">Assinar</button>
 </form>

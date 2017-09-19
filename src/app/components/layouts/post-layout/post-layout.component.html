@@ -1,1 +1,3 @@
-<markdown-to-html class="post" [src]="(post | async)?.markdownUrl"></markdown-to-html>
+<markdown-to-html *ngIf="!(post | async)?.content" class="post" [src]="(post | async)?.markdownUrl"></markdown-to-html>
+
+<div *ngIf="(post | async)?.content" [innerHTML]="(post | async)?.content" ></div>

@@ -13,7 +13,8 @@ export class PostFormComponent implements OnInit {
 
   constructor(
     private postService: PostService
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
   }
