@@ -6,6 +6,7 @@ import { BlogComponent } from '../views/blog/blog.component';
 import { PostLayoutComponent } from '../components/layouts/post-layout/post-layout.component';
 import { PostFormComponent } from '../views/post-form/post-form.component';
 import { PostListComponent } from '../views/post-list/post-list.component';
+import { ThanksPageComponent } from '../views/thanks-page/thanks-page.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,9 @@ const routes: Routes = [
     path: '', component: LandingPageLayoutComponent, children: [
       {
         path: 'landing-page', component: LandingPageComponent
+      },
+      {
+        path: 'thanks-page', component: ThanksPageComponent
       },
       {
         path: 'blog', component: BlogComponent

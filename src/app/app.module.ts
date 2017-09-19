@@ -27,6 +27,7 @@ import { CKEditorModule } from 'ng2-ckeditor';
 import { Angulartics2GoogleAnalytics, Angulartics2Module } from 'angulartics2';
 import { FacebookModule } from 'ngx-facebook';
 import { EbookDownloadComponent } from './components/reusable/ebook-download/ebook-download.component';
+import { ThanksPageComponent } from './views/thanks-page/thanks-page.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { EbookDownloadComponent } from './components/reusable/ebook-download/ebo
     PostFormComponent,
     PostListComponent,
     EbookDownloadComponent,
+    ThanksPageComponent,
   ],
   imports: [
     FormsModule,
