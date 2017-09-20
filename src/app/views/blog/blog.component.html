@@ -4,8 +4,8 @@
   <div class="cover" [style.background-image]="'url(' + post.imageUrl + ')'"></div>
 
   <div class="content" fxFlex>
-    <h4>{{post.title}}</h4>
+    <h2>{{post.title}}</h2>
     <p class="info">Por <strong>{{post.author}}</strong> em <time datetime="2017-9-18">{{ post.date | date:'yMd' }}</time></p>
-    <p class="excerpt">{{post.description}}</p>
+    <h3 class="excerpt">{{post.description}}</h3>
   </div>
 </div>
