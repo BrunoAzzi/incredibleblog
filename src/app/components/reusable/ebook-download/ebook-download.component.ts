@@ -3,6 +3,7 @@ import { IpService } from '../../../services/ip.service';
 import { LeadService } from '../../../services/lead.service';
 import { MdSnackBar } from '@angular/material';
 import { Lead } from '../../../model/lead';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ebook-download',
@@ -23,6 +24,7 @@ export class EbookDownloadComponent implements OnInit {
     private ipService: IpService,
     private leadService: LeadService,
     private snackbar: MdSnackBar,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -38,6 +40,7 @@ export class EbookDownloadComponent implements OnInit {
           success => {
             this.snackbar.open("Parabéns, você foi incluido com sucesso na nossa lista.", "Ok", { duration: 5000 });
             form.form.reset();
+            this.router.navigate(['thanks-page']);
           },
           error => this.snackbar.open(error.message, "Ok", { duration: 5000 })
         );
