@@ -20,13 +20,12 @@ import { IpService } from './services/ip.service';
 import { JsonpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { TopnavbarComponent } from './components/layouts/topnavbar/topnavbar.component';
-import { FacebookModule } from 'ngx-facebook';
 import { MarkdownToHtmlModule } from 'ng2-markdown-to-html';
 import { PostService } from './services/post.service';
 import { PostFormComponent } from './views/post-form/post-form.component';
 import { PostListComponent } from './views/post-list/post-list.component';
 import { CKEditorModule } from 'ng2-ckeditor';
-import { GoogleAnalyticsEventsService } from "./services/google-analytics-events.service";
+import { Angulartics2GoogleAnalytics, Angulartics2Module } from 'angulartics2';
 
 @NgModule({
   declarations: [
@@ -50,16 +49,15 @@ import { GoogleAnalyticsEventsService } from "./services/google-analytics-events
     BrowserAnimationsModule,
     MaterialModule,
     AppRoutingModule,
-    FacebookModule.forRoot(),
     MarkdownToHtmlModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
+    Angulartics2Module.forRoot([ Angulartics2GoogleAnalytics ])
   ],
   providers: [
     LeadService,
     PostService,
     IpService,
-    GoogleAnalyticsEventsService,
   ],
   bootstrap: [AppComponent],
   entryComponents: [
