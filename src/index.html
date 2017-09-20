@@ -1,18 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-
-  <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106737165-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments)};
-  gtag('js', new Date());
-
- gtag('config', 'UA-106737165-1');
-</script>
-
-
   <meta charset="utf-8">
   <title>WebMKT - Conselhos digitais</title>
   <base href="/">
@@ -22,8 +10,15 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
+  <app-root></app-root>
   <script src="https://cdn.ckeditor.com/4.5.11/full/ckeditor.js"></script>
   <script type="text/javascript" src="https://connect.facebook.net/en_US/sdk.js"></script>
-  <app-root></app-root>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-103040157-2', 'auto');
+  </script>
 </body>
 </html>
