@@ -26,6 +26,7 @@ import { PostListComponent } from './views/post-list/post-list.component';
 import { CKEditorModule } from 'ng2-ckeditor';
 import { Angulartics2GoogleAnalytics, Angulartics2Module } from 'angulartics2';
 import { FacebookModule } from 'ngx-facebook';
+import { EbookDownloadComponent } from './components/reusable/ebook-download/ebook-download.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { FacebookModule } from 'ngx-facebook';
     TopnavbarComponent,
     PostFormComponent,
     PostListComponent,
+    EbookDownloadComponent,
   ],
   imports: [
     FormsModule,

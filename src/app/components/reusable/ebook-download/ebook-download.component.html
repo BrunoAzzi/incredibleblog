@@ -1,0 +1,34 @@
+<md-card class="mat-elevation-z6">
+  <md-card-header>
+    <md-card-title>
+      <h1>5 SEGREDOS PARA TRANSFORMAR CLIQUES EM CLIENTES.</h1>
+    </md-card-title>
+    <md-card-subtitle>
+      Cadastre-se agora e receba por e-mail conteúdos que farão o seu negócio crescer.
+    </md-card-subtitle>
+  </md-card-header>
+  <img md-card-image src="assets/ebook.png" alt="E-book">
+  <md-card-content fxLayout="column">
+    <form fxLayout="column" #leadForm="ngForm">
+      <md-form-field>
+        <input name="name" mdInput placeholder="Nome:" required [(ngModel)]="lead.name">
+      </md-form-field>
+
+      <md-form-field fxFlex>
+        <input name="lastname" mdInput placeholder="Sobrenome:" required [(ngModel)]="lead.lastname">
+      </md-form-field>
+
+      <md-form-field>
+        <input name="email" mdInput type="email" placeholder="E-mail:" required [(ngModel)]="lead.email">
+      </md-form-field>
+
+      <md-select name="type" placeholder="Minha empresa atende:" [value]="'B2B'" [(ngModel)]="lead.type">
+        <md-option *ngFor="let companyType of companyTypeList" [value]="companyType.value">
+          {{ companyType.label }}
+        </md-option>
+      </md-select>
+
+      <button md-raised-button color="accent" (click)="saveLead(leadForm)">BAIXAR E-BOOK GRATUITO</button>
+    </form>
+  </md-card-content>
+</md-card>
