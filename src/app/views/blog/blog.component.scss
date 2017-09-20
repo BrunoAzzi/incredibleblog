@@ -4,6 +4,7 @@
 
 #post-list {
   margin: 30px 0;
+  overflow: hidden;
 
   .cover {
     min-width: 300px;
@@ -14,7 +15,7 @@
 }
 
 .content {
-  min-width: 300px;
+  min-width: 250px;
   padding: 10px 20px;
 }
 
