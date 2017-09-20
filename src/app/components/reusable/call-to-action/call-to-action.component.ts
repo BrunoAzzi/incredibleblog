@@ -3,6 +3,7 @@ import { IpService } from '../../../services/ip.service';
 import { LeadService } from '../../../services/lead.service';
 import { Lead } from '../../../model/lead';
 import { MdSnackBar } from '@angular/material';
+import { GoogleAnalyticsEventsService } from '../../../services/google-analytics-events.service';
 
 @Component({
   selector: 'app-call-to-action',
@@ -22,7 +23,8 @@ export class CallToActionComponent implements OnInit {
   constructor(
     private ipService: IpService,
     private leadService: LeadService,
-    private snackbar: MdSnackBar
+    private snackbar: MdSnackBar,
+    public googleAnalyticsEventsService: GoogleAnalyticsEventsService
   ) { }
 
   ngOnInit() {
@@ -36,6 +38,7 @@ export class CallToActionComponent implements OnInit {
         this.lead.ip = response.ip;
         this.leadService.saveLead(this.lead).then(
           success => {
+            this.googleAnalyticsEventsService.emitEvent("lead", "register", "call-to-action", 1);
             this.snackbar.open("Parabéns, você foi incluido com sucesso na nossa lista.", "Ok", { duration: 5000 });
             form.form.reset();
           },
