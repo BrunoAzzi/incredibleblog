@@ -12,7 +12,6 @@ import { MaterialModule } from './material/material.module';
 import { LeadFormComponent } from './components/dialogs/lead-form/lead-form.component';
 import { LeadService } from './services/lead.service';
 import { LandingPageLayoutComponent } from './components/layouts/landing-page-layout/landing-page-layout.component';
-import { BlogLayoutComponent } from './components/layouts/blog-layout/blog-layout.component';
 import { BlogComponent } from './views/blog/blog.component';
 import { PostLayoutComponent } from './components/layouts/post-layout/post-layout.component';
 import { CallToActionComponent } from './components/reusable/call-to-action/call-to-action.component';
@@ -26,6 +25,7 @@ import { PostFormComponent } from './views/post-form/post-form.component';
 import { PostListComponent } from './views/post-list/post-list.component';
 import { CKEditorModule } from 'ng2-ckeditor';
 import { Angulartics2GoogleAnalytics, Angulartics2Module } from 'angulartics2';
+import { FacebookModule } from 'ngx-facebook';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,6 @@ import { Angulartics2GoogleAnalytics, Angulartics2Module } from 'angulartics2';
     LandingPageComponent,
     LeadFormComponent,
     LandingPageLayoutComponent,
-    BlogLayoutComponent,
     BlogComponent,
     PostLayoutComponent,
     CallToActionComponent,
@@ -52,6 +51,7 @@ import { Angulartics2GoogleAnalytics, Angulartics2Module } from 'angulartics2';
     MarkdownToHtmlModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
+    FacebookModule.forRoot(),
     Angulartics2Module.forRoot([ Angulartics2GoogleAnalytics ])
   ],
   providers: [
