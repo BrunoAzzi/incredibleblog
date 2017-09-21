@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "blog-88796"
+    "default": "blog-88796",
+    "dev": "blog-dev-9f708"
   }
 }

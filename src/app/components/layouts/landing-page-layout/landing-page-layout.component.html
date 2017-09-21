@@ -1,19 +1,18 @@
-<app-topnavbar></app-topnavbar>
+<div fxLayout="column" fxLayoutAlign="space-between">
+  <app-topnavbar></app-topnavbar>
 
-<div fxLayout fxLayoutAlign="center start" fxLayoutWrap>
-  <div fxLayout="column" fxFlex="50" fxFlex.lt-md="100" class="wrapper">
-    <router-outlet></router-outlet>
-  </div>
-  <div fxLayout="column" fxFlex="25" fxFlex.lt-md="80" fxFlex.xs="100" fxFlex.md="35" fxLayoutAlign="center stretch" class="wrapper">
-    <app-ebook-download></app-ebook-download>
-    <!--<app-call-to-action></app-call-to-action>-->
+  <div fxLayout  fxLayoutAlign="center start" fxLayoutWrap>
+    <div fxLayout="column" fxFlex="50" fxFlex.lt-md="100" class="wrapper">
+      <router-outlet></router-outlet>
+    </div>
+    <div fxLayout="column" fxFlex.xs="100" fxFlex.md="45" fxFlex.sm="80" fxFlex="30" class="wrapper">
+      <app-ebook-download></app-ebook-download>
 
-    <fb-page fxLayout fxLayoutAlign="center center" href="https://www.facebook.com/webmktconselhosdigitais/k"></fb-page>
+      <fb-page fxLayout fxLayoutAlign="center center" href="https://www.facebook.com/webmktconselhosdigitais/k"></fb-page>
+    </div>
   </div>
+
+  <footer class="copyright" fxLayout fxLayoutAlign="center center">
+      <span>Copyright © Web Marketing - Conselhos Digitais 2017</span>
+  </footer>
 </div>
-
-<footer fxLayout="column">
-  <div class="copyright" fxLayout fxLayoutAlign="center center">
-    Copyright © Web Marketing - Conselhos Digitais 2017
-  </div>
-</footer>

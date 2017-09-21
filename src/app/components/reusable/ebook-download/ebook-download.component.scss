@@ -4,14 +4,10 @@
   font-size: 18px;
 }
 
-:host {
-  margin: 30px 15px;
-}
-
 .mat-card {
-  overflow: hidden;
   padding: 0;
   background-color: #efefef;
+  margin-bottom: 20px;
 }
 
 .mat-card-content {
@@ -21,6 +17,10 @@
 .mat-card-header {
   padding: 10px 20px;
   background-color: $purple;
+}
+
+.mat-card-image {
+  margin: 0;
 }
 
 .mat-select {
@@ -35,14 +35,14 @@
   color: white;
 }
 
+button, a {
+  margin: 10px 0;
+}
+
 h1 {
   font-size: 2em !important;
 }
 
 .mat-card-subtitle {
   color: white;
-}
-
-button {
-  margin: 5px 0;
 }

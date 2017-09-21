@@ -1,28 +1,29 @@
 :host {
- padding: 0 25px;
+ padding: 0 15px;
 }
 
-#post-list {
-  margin: 30px 0;
+.content {
+  padding: 10px 20px;
+}
+
+h4 {
+  color: gray;
+}
+
+.post-wrapper{
+  margin: 20px;
+  max-width: 600px;
   overflow: hidden;
 
   .cover {
-    min-width: 300px;
+    min-width: 100px;
     min-height: 150px;
     background-size: cover;
     background-position: center;
   }
-}
 
-.content {
-  min-width: 250px;
-  padding: 10px 20px;
-}
 
-h3 {
-  color: gray;
-}
-
-.post-wrapper:hover {
-  cursor: pointer;
+  &:hover {
+    cursor: pointer;
+  }
 }
